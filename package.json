@@ -1,0 +1,16 @@
+{
+  "name": "weeronline_web_scraping",
+  "version": "1.0.0",
+  "description": "Cookie dashboard data scraping from weeronline website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.6.5",
+    "translate-google": "^1.5.0"
+  }
+}
