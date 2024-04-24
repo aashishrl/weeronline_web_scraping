@@ -1,0 +1,191 @@
+{
+  "cookieBanner": {
+    "title": "Weeronline asks for your permission to use your personal data for the following:",
+    "permissions": [
+      "Personalized ads and content, ad and content measurement, target group research and service development",
+      "Store and/or access information on a device"
+    ],
+    "additionalInfo": [
+      "Your personal data is processed and information from your device (cookies, unique IDs and other device data) may be stored, accessed by and shared with 300 TCF vendor(s) and 510 advertising partner(s) or used specifically by this site or app.",
+      "Certain suppliers may process your personal data on the basis of legitimate interest. You can object to this by managing your options below. Look for a link at the bottom of this page to withdraw your consent or manage it via the privacy and cookie settings."
+    ],
+    "moreInfo": [
+      {
+        "title": "How can I change my choice?",
+        "popupMessage": "Look for a link at the bottom of this page to withdraw your consent or manage it via the privacy and cookie settings. Please see our privacy policy for more information.\n\nPrivacy Policylaunch"
+      },
+      {
+        "title": "What if I do not give permission?",
+        "popupMessage": "Your personal data will not be used for the above unless we and our suppliers determine that we have a legitimate interest to do so."
+      },
+      {
+        "title": "What does legitimate interest mean?",
+        "popupMessage": "Certain suppliers do not ask for your consent, but use your personal data on the basis of their legitimate interest. Click 'Manage options' to turn this off.\n\nMore informationlaunch"
+      },
+      {
+        "title": "Do I have to give permission for everything?",
+        "popupMessage": "No. Click 'Manage options' to change how your personal data is used and who uses it.\n\nSuppliers may do the following to collect and use data:\n\nMatch and combine data from other data sources\nLink different devices\nIdentify devices based on automatically sent information\n\nYour consent is required to collect and use the following data, unless it is collected to ensure security, prevent fraud or detect errors:\n\nUse precise geolocation data"
+      }
+    ],
+    "buttons": [
+      "Toestemming",
+      "Opties beheren"
+    ],
+    "manageOptionsButton": {
+      "title": "Manage your data",
+      "subTitle": "You can choose how your personal data is used. Suppliers want your permission for the following:",
+      "preferenceList": [
+        {
+          "title": "Store and/or access information on a device",
+          "description": "Cookies, device or similar online identifiers (e.g. login identifiers, randomly assigned identifiers, network-based identifiers) along with other information (e.g. browser type and information, language, screen size, supported technologies, etc.) may be stored on your device stored or read to recognize that device each time it connects to an app or website, for one or more of the purposes presented here.",
+          "consent": "Permission (250 suppliers)",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use limited data to select advertisements",
+          "description": "Advertisements served to you on this service may be based on limited data, such as the website or app you are using, your imprecise location, your device type, or what content you are using or have used (for example, to count the number of times an advertisement is displayed). is shown to you).",
+          "consent": "Consent (158 suppliers)",
+          "legitimateInterest": "Legitimate interest (69 suppliers)help_outline"
+        },
+        {
+          "title": "Create profiles for personalized advertisements",
+          "description": "Information about your activity on this service (such as forms you submit, content you view) may be stored and combined with other information about you (for example, information from your previous activity on this service and other websites or apps) or similar users. This is then used to create or improve a profile about you (including, for example, possible interests and personal aspects). Your profile can be used (also later) by these and other legal entities to display advertisements that appear to be more relevant based on your possible interests.",
+          "consent": "Consent (189 suppliers)",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use profiles for the selection of personalized advertisements",
+          "description": "Advertisements served to you on this service may be based on your advertising profiles, which may reflect your activity on this service or other websites or apps (such as the forms you submit, content you view), possible interests and/or personal aspects .",
+          "consent": "Consent (185 suppliers)",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Create profiles to personalize content",
+          "description": "Information about your activity on this service (for example, forms you submit, non-advertising content you view) may be stored and combined with other data about you (such as your previous activity on this service or other websites or apps) or similar users. This is then used to create or improve a profile about you (including, for example, possible interests and personal aspects). Your profile can be used (also later) to show content that appears to be more relevant based on your possible interests, such as by adjusting the order in which content is shown to you, making it even easier for you to find content that interests you. matches your interests.",
+          "consent": "Consent (61 suppliers)",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use profiles to select personalized content",
+          "description": "Content presented to you on this service may be based on your content personalization profiles, which may reflect your activity on this or other services (for example, the forms you submit, content you view), possible interests and/or personal aspects. This can be used, for example, to adjust the order in which content is shown to you, so that it is even easier for you to find (non-advertising) content that matches your interests.”",
+          "consent": "Consent (52 suppliers)",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Measure ad performance",
+          "description": "Information about which advertisement is shown to you and how you respond to it can be used to determine how well an advertisement worked in relation to you or other users and whether the objectives of the advertisement were achieved. For example, whether you saw an ad, whether you clicked on it, whether the ad led you to buy a product or visit a website, etc. This is very useful for identifying the relevance of advertising campaigns.",
+          "consent": "Consent (163 suppliers)",
+          "legitimateInterest": "Legitimate interest (106 suppliers)help_outline"
+        },
+        {
+          "title": "Measure content performance",
+          "description": "Information about what content is presented to you and how you respond to it can be used to determine, for example, whether the (non-advertising) content has reached the intended audience and matches your interests. For example, whether you read an article, watch a video, listen to a podcast or view a product description, how much time you spent on this service and the web pages you visit etc. This is very useful to determine the relevance of (non-ad)- map content. that is shown to you.",
+          "consent": "Consent (65 suppliers)",
+          "legitimateInterest": "Legitimate interest (32 suppliers)help_outline"
+        },
+        {
+          "title": "Understanding audience groups using statistics or combinations of data from different sources",
+          "description": "Reports may be generated from a combination of data sets (such as user profiles, statistics, market research, analytics data) relating to your and other users' interactions with advertising or (non-advertising) content to identify common characteristics (e.g. to determine which target groups are more receptive to an advertising campaign or to certain content).",
+          "consent": "Consent (119 suppliers)",
+          "legitimateInterest": "Legitimate interest (40 suppliers)help_outline"
+        },
+        {
+          "title": "Develop and improve services",
+          "description": "Information about your activity on this service, such as your interaction with advertisements or content, can be very useful in improving products and services and creating new products and services based on user interactions, audience type, etc. This specific purpose has no relates to the development or improvement of user profiles and identifiers.",
+          "consent": "Consent (118 suppliers)",
+          "legitimateInterest": "Legitimate interest (76 suppliers)help_outline"
+        },
+        {
+          "title": "Use limited data to select content",
+          "description": "Content presented to you on this service may be based on limited information, such as the website or app you are using, your imprecise location, your device type, or what content you are using or have used (for example, to track the number of times a video or article is shown to you).",
+          "consent": "Consent (20 suppliers)",
+          "legitimateInterest": "Legitimate interest (8 suppliers)help_outline"
+        },
+        {
+          "title": "Ensuring security, preventing and detecting fraud and detecting errors",
+          "description": "Your data may be used to monitor and prevent unusual and potentially fraudulent activity (for example, where advertisements are concerned, clicks on advertisements by bots) and ensure that systems and processes operate properly and securely. Your information may also be used to correct any problems you, the publisher or the advertiser may encounter in delivering content and advertisements and interacting with them.",
+          "consent": "",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Deliver and display advertisements and content",
+          "description": "Certain data (such as an IP address or the capabilities of a device) is used to ensure the technical compatibility of the content or advertisements and to facilitate the transfer of the content or advertisement to your device.",
+          "consent": "",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Match and combine data from other data sources",
+          "description": "Information about your activity on this service may be linked and combined with other information relating to you from various sources (for example, your activity on a separate online service, your use of an in-store loyalty card, or your responses to a survey ), in support of the purposes explained in this notice.",
+          "consent": "",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Link different devices",
+          "description": "In support of the purposes explained in this notice, your device may be considered likely linked to other devices belonging to you or your household (for example, because you are logged into the same service on both your phone and your computer, or because you may be using the same internet connection on both devices).",
+          "consent": "",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Identify devices based on automatically sent information",
+          "description": "Your device can be distinguished from other devices by information that it automatically sends when accessing the Internet (for example, the IP address of your Internet connection or the type of browser you are using) in support of the purposes described in this notice. mention.",
+          "consent": "",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use precise geolocation data",
+          "description": "If you agree, your precise location (within a radius of less than 500 meters) may be used to support the purposes explained in this notice.",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Store and/or access information on a device",
+          "description": "Cookies, device or similar online identifiers (e.g. login identifiers, randomly assigned identifiers, network-based identifiers) along with other information (e.g. browser type and information, language, screen size, supported technologies, etc.) may be stored on your device stored or read to recognize that device each time it connects to an app or website, for one or more of the purposes presented here.",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use limited data to select advertisements",
+          "description": "Advertisements served to you on this service may be based on limited information, such as the website or app you are using, your imprecise location, your device type, or what content you are using or have used (for example, to count the number of times an advertisement is displayed). is shown to you).",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Create profiles for personalized advertisements",
+          "description": "Information about your activity on this service (such as forms you submit, content you view) may be stored and combined with other information about you (for example, information from your previous activity on this service and other websites or apps) or similar users. This is then used to create or improve a profile about you (including, for example, possible interests and personal aspects). Your profile can be used (also later) by these and other legal entities to display advertisements that appear to be more relevant based on your possible interests.",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Use profiles for the selection of personalized advertisements",
+          "description": "Advertisements served to you on this service may be based on your advertising profiles, which may reflect your activity on this service or other websites or apps (such as the forms you submit, content you view), possible interests and/or personal aspects .",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Create profiles to personalize content",
+          "description": "Information about your activity on this service (for example, forms you submit, non-advertising content you view) may be stored and combined with other data about you (such as your previous activity on this service or other websites or apps) or similar users. This is then used to create or improve a profile about you (including, for example, possible interests and personal aspects). Your profile can be used (also later) to show content that appears to be more relevant based on your possible interests, such as by adjusting the order in which content is shown to you, making it even easier for you to find content that interests you. matches your interests.",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Measure ad performance",
+          "description": "Information about which advertisement is shown to you and how you respond to it can be used to determine how well an advertisement worked in relation to you or other users and whether the objectives of the advertisement were achieved. For example, whether you saw an ad, whether you clicked on it, whether the ad led you to buy a product or visit a website, etc. This is very useful for identifying the relevance of advertising campaigns.",
+          "consent": "Permission",
+          "legitimateInterest": ""
+        },
+        {
+          "title": "Measure content performance",
+          "description": "Information about what content is presented to you and how you respond to it can be used to determine whether, for example, the (non-advertising) content has reached the intended audience and matches your interests. For example, whether you read an article, watch a video, listen to a podcast or view a product description, how much time you spent on this service and the web pages you visit etc. This is very useful to determine the relevance of (non-ad)- map content. that is shown to you.",
+          "consent": "",
+          "legitimateInterest": "Legitimate interesthelp_outline"
+        },
+        {
+          "title": "Develop and improve services",
+          "description": "Information about your activity on this service, such as your interaction with advertisements or content, can be very useful in improving products and services and creating new products and services based on user interactions, audience type, etc. This specific purpose has no relates to the development or improvement of user profiles and identifiers.",
+          "consent": "",
+          "legitimateInterest": "Legitimate interesthelp_outline"
+        }
+      ]
+    }
+  }
+}

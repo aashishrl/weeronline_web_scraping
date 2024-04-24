@@ -4,12 +4,13 @@
   "description": "Cookie dashboard data scraping from weeronline website.",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node translate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
     "puppeteer": "^22.6.5",
     "translate-google": "^1.5.0"
   }
