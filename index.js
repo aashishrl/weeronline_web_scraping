@@ -1,31 +1,47 @@
+const fs = require('fs');
 const puppeteer = require('puppeteer');
-const translate = require('translate-google');
-
-async function translateText(text) {
-    try {
-        const translatedText = await translate(text, { to: 'en' });
-        return translatedText;
-    } catch (error) {
-        console.error('Error translating content:', error);
-        return text; // Return original text in case of error
-    }
-}
+const { moreInformation } = require('./moreInformation');
+const { manageOptions } = require('./manageOptions');
 
 async function scrapeAndTranslate() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://www.weeronline.nl/');
 
-    // Scrape text from the webpage
-    const scrapedTitle = await page.evaluate(() => {
-        return document.querySelector('.fc-dialog-headline').innerText;
-    });
+    const moreInfoData = await moreInformation(page);
+    const manageOptionsData = await manageOptions(page);
 
-    console.log("scrapedTitle");``
-    console.log(scrapedTitle);
-    // Translate the scraped text
-    const translatedText = await translateText(scrapedTitle);
-    console.log('Translated text:', translatedText);
+    const scrapedTitle = await page.evaluate((moreInfoData, manageOptionsData) => {
+        const title = document.querySelector('.fc-dialog-headline').innerText;
+
+        const permissionElements = document.querySelectorAll('.fc-stacks.fc-dialog-restricted-content ul li .fc-stack-name');
+        const permissions = Array.from(permissionElements, element => element.innerText.trim());
+
+        const additionalInfoElements = document.querySelectorAll('.fc-footer.fc-dialog-restricted-content p');
+        const additionalInfo = Array.from(additionalInfoElements, element => element.innerText.trim());
+
+        const moreInfo = moreInfoData; 
+
+        const buttonElements = Array.from(document.querySelectorAll('.fc-footer-buttons .fc-button')).slice(0, 2);
+        const buttons = Array.from(buttonElements, element => element.innerText.trim());
+
+        const manageOptionsButton = manageOptionsData; 
+        
+        return {
+            cookieBanner:{
+                title: title,
+                permissions: permissions,
+                additionalInfo: additionalInfo,
+                moreInfo: moreInfo,
+                buttons: buttons,
+                manageOptionsButton: manageOptionsButton,
+            }
+        };
+    }, moreInfoData, manageOptionsData);
+
+
+    fs.writeFileSync('weeronline_webscraping.json', JSON.stringify(scrapedTitle, null, 2));
+
 
     await browser.close();
 }
