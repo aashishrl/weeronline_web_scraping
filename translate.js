@@ -24,7 +24,7 @@ async function translateJSONData(jsonData) {
                     title: await translateText(item.title),
                     popupMessage: await translateText(item.popupMessage)
                 }))),
-                buttons: jsonData.cookieBanner.buttons,
+                buttons: jsonData.cookieBanner.buttons,                
                 manageOptionsButton: {
                     title: await translateText(jsonData.cookieBanner.manageOptionsButton.title),
                     subTitle: await translateText(jsonData.cookieBanner.manageOptionsButton.subTitle),
