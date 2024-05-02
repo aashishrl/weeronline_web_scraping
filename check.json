@@ -1,0 +1,82 @@
+{
+    "cookieBanner": {
+      "title": "Weeronline vraagt om uw toestemming om uw persoonsgegevens te gebruiken voor het volgende:",
+      "permissions": [
+        "Gepersonaliseerde advertenties en content, advertentie- en contentmetingen, doelgroepenonderzoek en ontwikkeling van diensten",
+        "Informatie op een apparaat opslaan en/of openen"
+      ],
+      "additionalInfo": [
+        "Uw persoonsgegevens worden verwerkt en informatie van uw apparaat (cookies, unieke ID's en andere apparaatgegevens) kan worden opgeslagen, geopend door en gedeeld met 299 TCF-leverancier(s) en 511 advertentiepartner(s) of specifiek door deze site of app worden gebruikt.",
+        "Bepaalde leveranciers kunnen uw persoonsgegevens verwerken op basis van gerechtvaardigd belang. U kunt hiertegen bezwaar maken door uw opties hieronder te beheren. Zoek onderaan deze pagina naar een link om uw toestemming in te trekken of te beheren via de privacy- en cookie-instellingen."
+      ],
+      "moreInfo": [
+        {
+          "title": "Hoe kan ik mijn keuze wijzigen?",
+          "popupMessage": "Zoek onderaan deze pagina naar een link om uw toestemming in te trekken of te beheren via de privacy- en cookie-instellingen. Raadpleeg ons privacybeleid voor meer informatie.\n\nPrivacybeleidlaunch"
+        },
+        {
+          "title": "Wat als ik geen toestemming geef?",
+          "popupMessage": "Uw persoonsgegevens worden niet gebruikt voor het bovenstaande, tenzij wij en onze leveranciers bepalen dat we een gerechtvaardigd belang hebben om dit te doen."
+        }     
+      ],
+      "buttons": [
+        "Toestemming",
+        "Opties beheren"
+      ],
+      "manageOptionsButton": {
+        "title": "Uw gegevens beheren",
+        "subTitle": "U kunt kiezen hoe uw persoonsgegevens worden gebruikt. Leveranciers willen uw toestemming hebben voor het volgende:",
+        "preferenceList": [
+  
+          {
+            "title": "Informatie op een apparaat opslaan en/of openen",
+            "description": "Cookies, apparaat- of soortgelijke online-identificatoren (bijv. login-identificatiemiddelen, willekeurig toegewezen identificatiemiddelen, netwerk-gebaseerde identificatiemiddelen) samen met andere informatie (bijv. browsertype en informatie, taal, schermgrootte, ondersteunde technologieën enz.) kunnen op uw apparaat worden opgeslagen of gelezen om dat apparaat telkens wanneer het verbinding maakt met een app of met een website te herkennen, voor een of meer van de hier gepresenteerde doeleinden.",
+            "consent": "Toestemming (249 leveranciers)",
+            "legitimateInterest": ""
+          },
+          {
+            "title": "Beperkte gegevens gebruiken om advertenties te selecteren",
+            "description": "Advertenties die u op deze dienst worden aangeboden, kunnen gebaseerd zijn op beperkte gegevens, zoals de website of app die u gebruikt, uw niet-precieze locatie, uw apparaattype of welke content u gebruikt of hebt gebruikt (bijvoorbeeld om het aantal keren dat een advertentie aan u getoond wordt te beperken).",
+            "consent": "Toestemming (157 leveranciers)",
+            "legitimateInterest": "Gerechtvaardigd belang (69 leveranciers)help_outline"
+          }
+        ],     
+        "supplierPreferencePage": {
+          "supplierPreferenceTitle": "Onze leveranciers bevestigen",
+          "supplierPreferenceSubTitle": "Leveranciers kunnen uw gegevens gebruiken om services te leveren. Als u een leverancier weigert, kan deze de gedeelde gegevens niet meer gebruiken.",        
+          "supplierPreferenceList": [
+            {
+              "title": "Captify Technologies Limited",
+              "description": {
+                "cookieDuration": "Cookieduur: 365 (dagen).",
+                "text": "Verzamelde en verwerkte gegevens: Probabilistische identificatoren, IP-adressen, Apparaatkenmerken, Keuzes voor privacy, Browse- en interactiegegevens",
+                "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+              },
+              "links": [
+                "Details bekijken",
+                "Opslaggegevens",
+                "Privacybeleidlaunch"
+              ],
+              "consentCheckbox1": "Toestemming",
+              "consentCheckbox2": ""
+            },
+            {
+              "title": "Captify Technologies Limited",
+              "description": {
+                "cookieDuration": "Cookieduur: 365 (dagen).",
+                "text": "Verzamelde en verwerkte gegevens: Probabilistische identificatoren, IP-adressen, Apparaatkenmerken, Keuzes voor privacy, Browse- en interactiegegevens",
+                "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+              },
+              "links": [
+                "Details bekijken",
+                "Opslaggegevens",
+                "Privacybeleidlaunch"
+              ],
+              "consentCheckbox1": "Toestemming",
+              "consentCheckbox2": ""
+            }
+          ]       
+        }
+      }
+    }
+  }
