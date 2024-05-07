@@ -7,16 +7,27 @@ async function scrapeCookieBanner() {
     await page.goto('https://www.weeronline.nl/');
 
     // Extract titles and descriptions of cookie banners
-    const cookieBanners = await page.evaluate(() => {
+    const cookieBanners = await page.evaluate(async () => {
         const title = document.querySelector('.fc-header h1').innerText;
 
         const permissionElements = document.querySelectorAll('.fc-stacks .fc-stack-name');
         const permissions = Array.from(permissionElements, element => element.innerText.trim());
 
-        return [{
+        // Manage Options Page PreferenceList logic
+        const preferenceList = Array.from(document.querySelector('.fc-preferences-container').querySelectorAll('.fc-preference-container'), (e) => ({
+            title: e.querySelector('.fc-preference-title h2').innerText,
+            description: e.querySelector('.fc-preference-description .fc-purpose-feature-description').innerText,
+            consent: e.querySelector('.fc-consent-preference-container') ? e.querySelector('.fc-consent-preference-container').innerText : '',
+            legitimateInterest: e.querySelector('.fc-legitimate-interest-preference-container') ? e.querySelector('.fc-legitimate-interest-preference-container').innerText : '',
+        }));
+        
+        return {
             title: title,
             permissions: permissions,
-        }];
+            manageOptions: {    
+                preferenceList: preferenceList,
+            },
+        };
     });
 
     await browser.close();
@@ -26,60 +37,74 @@ async function scrapeCookieBanner() {
 
 async function readScrapedDataFromFile() {
     try {
-        const data = await fs.readFile('check.json', 'utf8');
+        const data = await fs.readFile('weeronline_webscraping.json', 'utf8');
         const scrapedData = JSON.parse(data);
-        return [scrapedData]; // Wrap the scraped data object in an array
+        return scrapedData; // Return the scraped data object directly
     } catch (error) {
         console.error('Error reading scraped data file:', error);
         return null; // Return null if there's an error reading the file
     }
 }
 
+async function compareScrapedData() {
+    try {
+        const scrapedData = await readScrapedDataFromFile();
 
-async function calculateDataCoverage() {
-    const scrapedData = await readScrapedDataFromFile();
-    const cookieBanners = await scrapeCookieBanner();
-
-    let totalDataPoints = 0;
-    let scrapedDataPoints = 0;
-
-    // Check if scrapedData is an array
-    if (!Array.isArray(scrapedData)) {
-        console.error('Scraped data is not in the expected format.');
-        return 0; // Return 0 coverage if scraped data is not in the expected format
-    }
-
-    // Count the total number of data points
-    scrapedData.forEach(scrapedBanner => {
-        if (scrapedBanner.cookieBanner) {
-            totalDataPoints += Object.keys(scrapedBanner.cookieBanner).length;
+        // Check if scraped data is null or not in the expected format
+        if (!scrapedData || !scrapedData.manageOptionsButton || !scrapedData.manageOptionsButton.preferenceList) {
+            console.error('Scraped data is not in the expected format.');
+            return { mismatches: [], coveragePercentage: 0 };
         }
-    });
 
-    // Count the number of scraped data points
-    cookieBanners.forEach(cookieBanner => {
-        scrapedData.forEach(scrapedBanner => {
+        const scrapedPreferenceList = scrapedData.manageOptionsButton.preferenceList;
+        const cookieBanners = await scrapeCookieBanner();
+        const websitePreferenceList = cookieBanners.manageOptions.preferenceList;
+
+        // Check if the lengths are equal
+        if (scrapedPreferenceList.length !== websitePreferenceList.length) {
+            console.error('Lengths of preference lists are different.');
+            return { mismatches: [], coveragePercentage: 0 };
+        }
+
+        let matchingItems = 0;
+
+        // Compare each preference list item
+        const mismatches = [];
+        for (let i = 0; i < scrapedPreferenceList.length; i++) {
+            const scrapedItem = scrapedPreferenceList[i];
+            const websiteItem = websitePreferenceList[i];
+
+            // Compare specific properties like title, description, consent, legitimateInterest
             if (
-                scrapedBanner.cookieBanner &&
-                cookieBanner.title === scrapedBanner.cookieBanner.title &&
-                JSON.stringify(cookieBanner.permissions) === JSON.stringify(scrapedBanner.cookieBanner.permissions)
+                scrapedItem.title !== websiteItem.title ||
+                scrapedItem.description !== websiteItem.description ||
+                scrapedItem.consent !== websiteItem.consent ||
+                scrapedItem.legitimateInterest !== websiteItem.legitimateInterest
             ) {
-                scrapedDataPoints += Object.keys(scrapedBanner.cookieBanner).length;
+                mismatches.push(`Mismatch found in preference list item ${i + 1}`);
+            } else {
+                matchingItems++;
             }
-        });
-    });
+        }
 
-    // Calculate the data coverage percentage
-    const dataCoveragePercentage = totalDataPoints === 0 ? 0 : (scrapedDataPoints / totalDataPoints) * 100;
-    return dataCoveragePercentage;
+        const coveragePercentage = (matchingItems / scrapedPreferenceList.length) * 100;
+
+        return { mismatches, coveragePercentage };
+    } catch (error) {
+        console.error('Error comparing scraped data:', error);
+        return { mismatches: [], coveragePercentage: 0 };
+    }
 }
 
 
-// Run the calculation and log the result
-calculateDataCoverage().then(coveragePercentage => {
-    console.log(`Data coverage percentage: ${coveragePercentage.toFixed(2)}%`);
+// Run the comparison
+compareScrapedData().then(mismatches => {
+    if (mismatches.length === 0) {
+        console.log('No mismatches found. Data is consistent.');
+    } else {
+        console.log('Mismatches found:');
+        mismatches.forEach(mismatch => console.error(mismatch));
+    }
 }).catch(error => {
-    console.error('Error calculating data coverage:', error);
+    console.error('Error comparing scraped data:', error);
 });
-
-
