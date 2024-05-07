@@ -55,8 +55,8 @@
 
 const fs = require('fs');
 const puppeteer = require('puppeteer');
-const { moreInformation } = require('./moreInformation');
-const { manageOptions } = require('./manageOptions');
+const { moreInformation } = require('./scrapper/moreInformation');
+const { manageOptions } = require('./scrapper/manageOptions');
 
 async function scrapeAndTranslate() {
     const browser = await puppeteer.launch();

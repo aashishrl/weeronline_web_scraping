@@ -46,7 +46,7 @@ async function translateJSONData(jsonData) {
 }
 
 // Load the JSON data
-const jsonData = require('./weeronline_webscraping.json');
+const jsonData = require('../weeronline_webscraping.json');
 
 // Translate the JSON data
 translateJSONData(jsonData)
