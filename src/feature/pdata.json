@@ -1,0 +1,83 @@
+{
+    "cookieBanner": {
+        "title": "Weeronline et volgende:",
+        "permissions": [
+            "Gepersonaliseer doelgroepenonderzoek en ontwikkeling van diensten",
+            "Informatie op een apparaat opslaan en/of openen"
+        ],
+        "additionalInfo": [
+            "Uw perse of app worden gebruikt.",
+            "Bepaaldcy- en cookie-instellingen."
+        ],
+        "moreInfo": [
+            {
+                "title": "Hoe kan ik mijn keuze wijzigen?",
+                "popupMessage": "Zoek on. Raadpleeg ons privacybeleid voor meer informatie.\n\nPrivacybeleidlaunch"
+            },
+            {
+                "title": "Wat als ik geen toestemming geef?",
+                "popupMessage": "Uwrdigd belang hebben om dit te doen."
+            },
+            {
+                "title": "Wat betekent gerechtvaardigd belang?",
+                "popupMessage": "Bepaigd belang. Klik op 'Opties beheren' om dit uit te zetten.\n\nMeer informatielaunch"
+            },
+            {
+                "title": "Moet ik voor alles toestemming geven?",
+                "popupMessage": "Nen:\n\nPrecieze geolocatiegegevens gebruiken"
+            }
+        ],
+        "buttons": [
+            "Toestemming",
+            "Opties beheren"
+        ],
+        "manageOptionsButton": {
+            "title": "Uw gegevens beheren",
+            "subTitle": "U voor het volgende:",
+            "preferenceList": [
+                {
+                    "title": "Informatnen",
+                    "description": "presenteerde doeleinden.",
+                    "consent": "Toestemming (251 leveranciers)",
+                    "legitimateInterest": ""
+                }
+            ],
+            "supplierPreferencePage": {
+                "supplierPreferenceTitle": "Onze leveranciers bevestigen",
+                "supplierPreferenceSubTitle": "Leverancdeelde gegevens niet meer gebruiken.",
+                "supplierPreferenceList": [
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Probabilistische identificatoren, IP-adressen, Niet-precieze locatiegegevens, Apparaat-ID's, Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Captify Technologies Limited",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Probabilistische identificatoren, IP-adressen, Apparaatkenmerken, Keuzes voor privacy, Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    }
+                ]
+            }
+        }
+    }
+}

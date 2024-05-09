@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let data1 = {
+            "supplierPreferencePage": {
+                "supplierPreferenceList": [
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },                       
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Captify Technologies Limited",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    }
+                ]
+            }
+        }
+        let data2 = {
+            "supplierPreferencePage": {
+                "supplierPreferenceList": [
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Captify Technologies Limited",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 361 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },                       
+                        "consentCheckbox1": "emming",
+                        "consentCheckbox2": ""
+                    }
+                ]
+            }
+        }
+
+        function calculateMatchingPercentage(obj1, obj2) {
+            let totalKeys = 0;
+            let matchingKeys = 0;
+
+            // Helper function to recursively compare nested objects and arrays
+            function compare(obj1, obj2) {
+                for (let key in obj1) {
+                    if (obj2.hasOwnProperty(key)) {
+                        if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+                            compare(obj1[key], obj2[key]); // Recursively compare nested objects
+                        } else if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+                            // If both values are arrays, compare their elements
+                            let minArrayLength = Math.min(obj1[key].length, obj2[key].length);
+                            for (let i = 0; i < minArrayLength; i++) {
+                                if (obj1[key][i] === obj2[key][i]) {
+                                    matchingKeys++;
+                                }
+                                totalKeys++;
+                            }
+                        } else {
+                            // If both values are simple types (strings, numbers, etc.), compare them directly
+                            if (obj1[key] === obj2[key]) {
+                                matchingKeys++;
+                            }
+                            totalKeys++;
+                        }
+                    }
+                }
+            }
+
+            // Call the helper function to start the comparison
+            compare(obj1, obj2);
+
+            // Calculate the percentage
+            let percentage = (matchingKeys / totalKeys) * 100;
+            return percentage.toFixed(2) + "%"; // Round to two decimal places
+        }
+
+        // Calculate the matching percentage between data1 and data2
+        let matchingPercentage = calculateMatchingPercentage(data1, data2);
+        console.log("Matching Percentage:", matchingPercentage);
+
+    </script>
+</body>
+
+</html>

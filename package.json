@@ -4,7 +4,7 @@
   "description": "Cookie dashboard data scraping from weeronline website.",
   "main": "index.js",
   "scripts": {
-    "start": "node translate"
+    "start": "node coveragePercentage"
   },
   "keywords": [],
   "author": "",

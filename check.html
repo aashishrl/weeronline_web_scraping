@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function calculateMatchingPercentage(data1, data2) {
+            const compareObjects = (obj1, obj2) => {
+                for (let key in obj1) {
+                    if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+                        if (!compareObjects(obj1[key], obj2[key])) {
+                            return false;
+                        }
+                    } else if (obj1[key] !== obj2[key]) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+
+            if (!compareObjects(data1, data2)) {
+                return "Objects are not identical";
+            }
+
+            const links1 = data1.supplierPreferencePage.supplierPreferenceList.map(item => item.links);
+            const links2 = data2.supplierPreferencePage.supplierPreferenceList.map(item => item.links);
+
+            if (links1.length !== links2.length) {
+                return `Lengths do not match: data1 has ${links1.length} items, data2 has ${links2.length} items`;
+            }
+
+            const totalLinks = links1.reduce((total, links, index) => {
+                const matchingLinks = links.filter(link => links2[index].includes(link));
+                return total + matchingLinks.length;
+            }, 0);
+
+            const totalPossibleMatches = links1.reduce((total, links) => total + links.length, 0);
+
+            const matchingPercentage = (totalLinks / totalPossibleMatches) * 100;
+            return matchingPercentage.toFixed(2);
+        }
+
+        let data1 = {
+            "supplierPreferencePage": {
+                "supplierPreferenceList": [
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": ""
+                        },
+                    },
+                ]
+            }
+        };
+
+        let data2 = {
+            "supplierPreferencePage": {
+                "supplierPreferenceList": [
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                    {
+                        "links": ["Details bekijken", "Opslaggegevens", "Privacybeleidlaunch"],
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                    },
+                ]
+            }
+        };
+
+        const matchingPercentage = calculateMatchingPercentage(data1, data2);
+        console.log(matchingPercentage);
+
+    </script>
+</body>
+
+</html>

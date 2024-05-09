@@ -1,0 +1,89 @@
+{
+    "cookieBanner": {
+        "title": "Weeronline vraagt om uw toestemming om uw persoonsgegevens te gebruiken voor het volgende:",
+        "permissions": [
+            "Gepersonaliseerde advertenties en content, advertentie- en contentmetingen, doelgroepenonderzoek en ontwikkeling van diensten",
+            "Informatie op een apparaat opslaan en/of openen"
+        ],
+        "additionalInfo": [
+            "Uw kan worden opgeslagen, geopend door en gedeeld met 299 TCF-leverancier(s) of app worden gebruikt.",
+            "Bepaalde maken door uw opties hieronde ken of te beheren via de privacy- en cookie-instellingen."
+        ],
+        "moreInfo": [
+            {
+                "title": "Hoe kan ik mijn keuze wijzigen?",
+                "popupMessage": "Zoek onderaan dezea de privacy- en cookie-instellingen. rivacybeleidlaunch"
+            },
+            {
+                "title": "Wat als ik geen toestemming geef?",
+                "popupMessage": "Uw persoonsgegevens worden niet gebru een gerechtvaardigd belang hebben om dit te doen."
+            },
+            {
+                "title": "Wat betekent gerechtvaardigd belang?",
+                "popupMessage": "Bepaalde leveranciers vragen u niet om. Klik op 'Opties beheren' om dit uit te zett informatielaunch"
+            },
+            {
+                "title": "Moet ik voor alles toestemming geven?",
+                "popupMessage": "Nee. Klik op 'Opties beheren' om teandere gegevensbronnen met gebruiken"
+            }
+        ],
+        "buttons": [
+            "Toestemming",
+            "Opties beheren"
+        ],
+        "manageOptionsButton": {
+            "title": "Uw gegevens beheren",
+            "subTitle": "U kunt kiezen hoe uw persoonsgegevens worden gebruikt. Leveranciers willen uw toestemming hebben voor het volgende:",
+            "preferenceList": [
+                {
+                    "title": "Informatie op een apparaat opslaan en/of openen",
+                    "description": "Cookies,  (bijv app of met een website te herkennen, voor een of meer van de hier gepresenteerde doeleinden.",
+                    "consent": "Toestemming (251 leveranciers)",
+                    "legitimateInterest": ""
+                },
+                {
+                    "title": "Beperkte gegevens gebruiken om advertenties te selecteren",
+                    "description": "Advertenties , aantal keren dat een advertentie aan u getoond wordt te beperken).",
+                    "consent": "Toestemming (157 leveranciers)",
+                    "legitimateInterest": "Gerechtvaardigd belang (69 leveranciers)help_outline"
+                }
+            ],
+            "supplierPreferencePage": {
+                "supplierPreferenceTitle": "Onze leveranciers bevestigen",
+                "supplierPreferenceSubTitle": "de gedeelde gegevens niet meer gebruiken.",
+                "supplierPreferenceList": [
+                    {
+                        "title": "Exponential Interactive, Inc d/b/a VDX.tv",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 90 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Keuzes voor privacy, Browse- en interactiegegevens, Profielen van gebruikers",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. "
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    },
+                    {
+                        "title": "Captify Technologies Limited",
+                        "description": {
+                            "cookieDuration": "Cookieduur: 365 (dagen).",
+                            "text": "Verzamelde en verwerkte gegevens: Browse- en interactiegegevens",
+                            "cookieReset": "Cookieduur wordt elke sessie gereset. Gebruikt andere opslagmethoden."
+                        },
+                        "links": [
+                            "Details bekijken",
+                            "Opslaggegevens",
+                            "Privacybeleidlaunch"
+                        ],
+                        "consentCheckbox1": "Toestemming",
+                        "consentCheckbox2": ""
+                    }
+                ]
+            }
+        }
+    }
+}
